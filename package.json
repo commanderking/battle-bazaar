@@ -58,7 +58,7 @@
       "src/**/*.{js,jsx,mjs}"
     ],
     "setupFiles": [
-      "<rootDir>/config/polyfills.js"
+      "<rootDir>/config/jest/jestSetup.js"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
