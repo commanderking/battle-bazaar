@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './common/css/rcSelect.css';
 import { MonsterSelectionContainer } from './features/monsterSelection/MonsterSelectionContainer';
 
 const battlePhases = {

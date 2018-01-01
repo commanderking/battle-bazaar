@@ -1,9 +1,10 @@
 import React from 'react';
-
+import { monstersData } from '../../data/monsters';
+import { MonsterSelect } from './MonsterSelect';
 const MonsterSelectionContainer = () => {
   return (
     <div>
-      Placeholder for Monster Selection
+      <MonsterSelect monstersData={monstersData} />
     </div>
   )
 }

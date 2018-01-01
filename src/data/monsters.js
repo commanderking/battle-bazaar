@@ -1,4 +1,4 @@
-[
+export const monstersData = [
   {
     "monsterName": "Lake Monster",
     "hp": 15,
