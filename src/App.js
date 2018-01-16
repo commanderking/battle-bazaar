@@ -1,28 +1,22 @@
 import React, { Component } from 'react';
+import { observer } from 'mobx-react';
 import './App.css';
 import './common/css/rcSelect.css';
 import { MonsterSelectionContainer } from './features/monsterSelection/MonsterSelectionContainer';
+import { battlePhases } from './constants/battleConstants';
+import { AppStore } from './stores/AppStore';
 
-const battlePhases = {
-  MONSTER_SELECT: 'MONSTER_SELECT'
-}
+const appStore = new AppStore();
 
+@observer
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      battlePhase: battlePhases.MONSTER_SELECT,
-      selectedMonster: '',
-      characterAttributes: {}
-    }
-  }
   render() {
-    const { battlePhase } = this.state;
+    const { battlePhase } = appStore;
     return (
       <div className="App">
         <h1>Battle Bazaar</h1>
         { battlePhase === battlePhases.MONSTER_SELECT
-          && <MonsterSelectionContainer /> }
+          && <MonsterSelectionContainer appStore={appStore} /> }
       </div>
     );
   }

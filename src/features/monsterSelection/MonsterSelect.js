@@ -1,9 +1,15 @@
 import React from 'react';
 import Select, { Option } from 'rc-select';
-const MonsterSelect = ({ monstersData }) => {
+import { observer } from 'mobx-react';
+
+const MonsterSelect = observer(({ monstersData, appStore }) => {
   return (
       <Select
-        defaultValue="Select a Monster">
+        defaultValue="Select a Monster"
+        onChange={(monsterName) => {
+          appStore.selectMonster(monsterName);
+        }}
+      >
         {
           monstersData.map((monster, index) => (
             <Option
@@ -16,6 +22,6 @@ const MonsterSelect = ({ monstersData }) => {
         }
       </Select>
   )
-}
+})
 
 export { MonsterSelect };
