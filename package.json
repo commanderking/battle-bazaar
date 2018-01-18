@@ -96,16 +96,6 @@
       "node"
     ]
   },
-  "babel": {
-    "presets": [
-      "react-app",
-      "es2015",
-      "stage-1"
-    ],
-    "plugins": [
-      "transform-decorators-legacy"
-    ]
-  },
   "eslintConfig": {
     "extends": "react-app"
   }
