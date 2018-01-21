@@ -5,8 +5,7 @@ import { MonsterCard } from './MonsterCard';
 import { observer } from 'mobx-react';
 import { battlePhases } from '../../constants/battleConstants';
 
-@observer
-class MonsterSelectionContainer extends React.Component {
+const MonsterSelectionContainer = observer(class MonsterSelectionContainer extends React.Component {
   render() {
     const { appStore } = this.props;
     return (
@@ -26,6 +25,6 @@ class MonsterSelectionContainer extends React.Component {
       </div>
     )
   }
-}
+});
 
 export { MonsterSelectionContainer };

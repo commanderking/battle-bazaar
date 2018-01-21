@@ -8,8 +8,7 @@ import { AppStore } from './stores/AppStore';
 
 const appStore = new AppStore();
 
-@observer
-class App extends Component {
+const App = observer(class App extends Component {
   render() {
     const { battlePhase } = appStore;
     return (
@@ -20,6 +19,6 @@ class App extends Component {
       </div>
     );
   }
-}
+});
 
 export default App;
