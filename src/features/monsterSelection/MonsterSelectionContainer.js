@@ -3,6 +3,7 @@ import { monstersData } from '../../data/monsters';
 import { MonsterSelect } from './MonsterSelect';
 import { MonsterCard } from './MonsterCard';
 import { observer } from 'mobx-react';
+import { battlePhases } from '../../constants/battleConstants';
 
 @observer
 class MonsterSelectionContainer extends React.Component {
@@ -11,7 +12,17 @@ class MonsterSelectionContainer extends React.Component {
     return (
       <div>
         <MonsterSelect monstersData={monstersData} appStore={appStore} />
-        <MonsterCard monstersData={monstersData} appStore={appStore} />
+        { appStore.selectedMonsterName &&
+          <div>
+            <MonsterCard appStore={appStore} />
+            <button onClick={() => {
+                appStore.changeBattlePhase(battlePhases.CHARACTER_SELECT)
+            }}
+            >
+              Fight Monster
+            </button>
+          </div>
+        }
       </div>
     )
   }

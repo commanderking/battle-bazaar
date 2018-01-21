@@ -19,6 +19,10 @@ class AppStore {
   selectMonster(monster) {
     this.selectedMonsterName = monster;
   }
+
+  changeBattlePhase(phase) {
+    this.battlePhase = phase;
+  }
 }
 
 export { AppStore };

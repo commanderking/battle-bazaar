@@ -22,7 +22,6 @@ const MonsterCard = observer(({ appStore }) => {
             </div>
           </div>
         </div>
-        <button>Submit</button>
       </div>
     )
   }
