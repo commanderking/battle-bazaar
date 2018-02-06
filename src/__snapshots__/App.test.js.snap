@@ -221,6 +221,8 @@ exports[`renders without crashing 1`] = `
           },
         ],
         "battlePhase": "MONSTER_SELECT",
+        "changeBattlePhase": [Function],
+        "selectMonster": [Function],
         "selectedMonsterName": null,
       }
     }
